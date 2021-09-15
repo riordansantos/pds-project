@@ -1,26 +1,41 @@
 .room-list{
     
+    // width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
     justify-content: center;
-    background: #fefefe;
+    background: #DEFBF8;
     border-radius: 8px;
     box-shadow: 0 2px 12px rbga(0, 0, 0, 0.04);
     padding: 10px;
     
+    
     .content{
-       
+        // width: 100%;
+        
         .footer-buttons{
+            // width: 100%;
             display: flex;
-            flex-direction: column;
+            // flex-direction: row;
+            justify-content: space-between;
             align-items: center;
+            @media(max-width: 900px){
+                width: 100%;
+                padding: 0;
+                text-align: center;
+                flex-direction: column;
+                align-self: center;
+            }
             
             p{
                 display: flex;
                 justify-content: center;
-                font-size: 28px;
-                margin-bottom: 10px;
+                font-size: 20px;
+                // margin-bottom: 10px;
+                @media(max-width: 900px){
+                    margin-bottom: 10px;
+                }
             }
             button{
                 
@@ -29,16 +44,21 @@
                 border: 0;
                 background: #17C3B2;
                 color:#FFF;
-                font-weight: 500;
+                font-weight: bold;
                 padding: 0 15px;
                 cursor: pointer;
                 transition: filter 0.2s;
-                
+
                 
             }
             button:nth-child(1){
-               margin-top: 1rem;
+               margin: 0 1rem 0 1rem;
                 
+            }
+
+            .buttons{
+                display: flex;
+                align-items: center;
             }
 
         }
@@ -46,6 +66,9 @@
     
     
 }
+
+
+
 
 @media(width:280px){
     .room-list{
